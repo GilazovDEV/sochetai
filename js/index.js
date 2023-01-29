@@ -16,14 +16,14 @@ function onEntry(entry) {
   }
 
   let oH1 = document.querySelector('#countdown');
-let nSec = 10;
+let nSec = 5;
 
 function fCountdown() {
-  oH1.textContent = (nSec < 10 ? '0' + nSec : nSec);
+  oH1.textContent = (nSec < 5 ? '0' + nSec : nSec);
   if (!nSec) {
     clearInterval(tCountdown);
     setTimeout(() => {
-      nSec = 10;
+      nSec = 5;
       tCountdown = setInterval(fCountdown, 1000);
     }, 5000);
   }
